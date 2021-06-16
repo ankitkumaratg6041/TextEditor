@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text Editor</title>
+</head>
+<body>
+    <!-- Page heading  -->
+    <div class="page-heading">
+        <a href="#">Text Editor</a>
+    </div>
+
+    <!-- main content starts here -->
+    <main>
+        <nav class="navbar">
+            <ul class="main-list">
+                <li class="button-format" onclick="textBold(this)"><a>Bold</a></li>
+                <li class="button-format" onclick="textItalic(this)"><a>Italic</a></li>
+                <li class="button-format" onclick="textUnderLine(this)"><a>Underline</a></li>
+                <li class="button-format alignButton" onclick="textAlignment(this, 'left')"><a>L</a></li>
+                <li class="button-format alignButton" onclick="textAlignment(this, 'center')"><a>C</a></li>
+                <li class="button-format alignButton" onclick="textAlignment(this, 'right')"><a>R</a></li>
+                
+                <li class="button-format font-size-buttons" onclick="alterFontSize(this, 'up')"><a>&uarr;</a></li>
+                <li class="button-format font-size-buttons" onclick="alterFontSize(this, 'down')"><a>&darr;</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <div class="input-space">
+            <div class="user-input">
+                <h3 class="input-heading">Your Document Text</h3>
+                <textarea class="text-input" id="format-input" oninput="getText()" rows="3"></textarea>
+            </div>
+            <div class="output user-input">
+                <h3 class="output-heading input-heading">Formatted Text</h3>
+                <textarea class="text-input" id="format-output" rows="3"></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
